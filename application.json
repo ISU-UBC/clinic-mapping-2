@@ -19,7 +19,7 @@
                     "color": {
                         "choropleth": "PHYS_CAPITA",
                         "identified": "",
-                        "scheme": ["#feedde","#fdbe85","#fd8d3c","#d94701"]
+                        "scheme": ["#feedde","#fdbe85","#fd8d3c","#e6550d","#a63603"]
                     }
                 }
             },
