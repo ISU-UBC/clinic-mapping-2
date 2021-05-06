@@ -125,6 +125,8 @@ export default class Application extends Templated {
 
       let colorScheme = layerConfig.style.theme.color.scheme;
 
+      let ranking = layerConfig.style.theme.color.ranking;
+
       if (layerConfig.style.theme.size.proportional != "") {
         layerConfig.style.sizeFn = Scales.GetProportionFn(layer.getSource().getFeatures(), proportionalID);
       }
@@ -134,7 +136,7 @@ export default class Application extends Templated {
       } 
       
       else if (layerConfig.style.theme.color.choropleth != "") {
-        layerConfig.style.colorFn = Scales.GetChoroplethFn(layer.getSource().getFeatures(), choroplethID, colorScheme);
+        layerConfig.style.colorFn = Scales.GetChoroplethFn(layer.getSource().getFeatures(), choroplethID, colorScheme, ranking);
       }
 
       // Style each feature in the layer
@@ -213,7 +215,7 @@ export default class Application extends Templated {
     if (style.colorFn == undefined) return;
 
     let legend = new ol.legend.Legend({ 
-      title: title + " Color Legend",
+      title: style.theme.color.legend,
       margin: 15
     });
 
@@ -247,7 +249,7 @@ export default class Application extends Templated {
     if (style.colorFn == undefined) return;
 
     let legend = new ol.legend.Legend({ 
-     title: title + " Color Legend",
+     title: style.theme.color.legend,
      margin: 15
    });
    
@@ -275,7 +277,7 @@ export default class Application extends Templated {
     if (style.sizeFn == undefined) return;
     
     var legend = new ol.legend.Legend({ 
-      title: title + " Size Legend",
+      title: style.theme.size.legend,
       margin: 15
     });
 
@@ -340,7 +342,13 @@ export default class Application extends Templated {
       for (let index = 0; index < formattedFields.length; index++) {
         let field = formattedFields[index];
         let key = unformattedFields[index];
-        content += `<li>${field}: ${props[key]}</li>`;
+        let val = props[key];
+        if (!isNaN(val) && (typeof(val) == "string")) {
+          let fixed = parseFloat(val).toFixed(1);
+          content += `<li>${field}: ${fixed}</li>`;
+        } else {
+          content += `<li>${field}: ${val}</li>`;
+        }
       }
 
       content += "</ul>";

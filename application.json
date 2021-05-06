@@ -14,12 +14,15 @@
                 "icon": "./assets/icon.png",
                 "theme": {
                     "size": {
-                        "proportional": ""
+                        "proportional": "",
+                        "legend": ""
                     },
                     "color": {
                         "choropleth": "PHYS_CAPITA",
+                        "ranking": "decile",
                         "identified": "",
-                        "scheme": ["#feedde","#fdbe85","#fd8d3c","#e6550d","#a63603"]
+                        "scheme": ["#fff5eb","#fee7cf","#fdd4ab","#fdb97e","#fd9c51","#f77d2a","#e85e0e","#cc4503","#a33503","#7f2704"],
+                        "legend": "Decile"
                     }
                 }
             },
@@ -34,11 +37,57 @@
                     "NUM_PHYS"
                 ],
                 "formatted": [
-                    "CHSA Name", 
-                    "HSDA Name", 
-                    "HA Name",
+                    "CHSA", 
+                    "HSDA", 
+                    "HA",
                     "CHSA Population 2016",
-                    "Physicians per Capita",
+                    "Number of Family Physicians per 100,000 Population",
+                    "Number of Physicians"
+                ]
+            }
+        },
+        "CHSAs 2018 2": {
+            "id": "CHSA20182",
+            "shapeType": "polygon",
+            "url": "./data/CHSA_2018.geojson",
+            "title": "CHSAs 2018 2",
+            "style": {
+                "styleType": "custom",
+                "color": "rgba(220,220,100, 1)",
+                "opacity": 0.6,
+                "strokeColor": "",
+                "scale": "",
+                "icon": "./assets/icon.png",
+                "theme": {
+                    "size": {
+                        "proportional": "",
+                        "legend": ""
+                    },
+                    "color": {
+                        "choropleth": "PHYS_CAPITA",
+                        "ranking": "quintile",
+                        "identified": "",
+                        "scheme": ["#feedde","#fdbe85","#fd8d3c","#e6550d","#a63603"],
+                        "legend": "Number of Family Physicians per 100,000 Population"
+                    }
+                }
+            },
+            "visible": false,
+            "popup": {
+                "unformatted": [
+                    "CHSA_Name", 
+                    "HSDA_Name", 
+                    "HA_Name",
+                    "CHSA_Pop16",
+                    "PHYS_CAPITA",
+                    "NUM_PHYS"
+                ],
+                "formatted": [
+                    "CHSA", 
+                    "HSDA", 
+                    "HA",
+                    "CHSA Population 2016",
+                    "Number of Family Physicians per 100,000 Population",
                     "Number of Physicians"
                 ]
             }

@@ -1,5 +1,5 @@
 export default class Scales {
-    static GetChoroplethFn(features, id, color) {
+    static GetChoroplethFn(features, id, color, ranking) {
         let featureArray = this.CreateFeatureArray(features, id);
 
         let fA = featureArray.map(Number);
@@ -7,7 +7,7 @@ export default class Scales {
         let max = d3.max(fA);
 
         return d3.scaleThreshold()
-                    .domain([max * 0.20, max * 0.4, max * 0.6, max * 0.8, max])
+                    .domain(this.RankData(ranking, max))
                     .range(color);
     }
 
@@ -43,5 +43,28 @@ export default class Scales {
             featureArray.push(f);
         });
         return featureArray;
+    }
+
+    static RankData(ranking, max) {
+        let data;
+        if(ranking == "quartile") {
+            data = [max * 0.25, max * 0.5, max * 0.75, max];
+        } else if (ranking == "quintile") {
+            data = [max * 0.20, max * 0.4, max * 0.6, max * 0.8, max];
+        } else if (ranking == "decile") {
+            data = [
+              max * 0.1,
+              max * 0.2,
+              max * 0.3,
+              max * 0.4,
+              max * 0.5,
+              max * 0.6,
+              max * 0.7,
+              max * 0.8,
+              max * 0.9,
+              max,
+            ];
+        }
+        return data;
     }
 }

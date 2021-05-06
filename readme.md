@@ -4,8 +4,6 @@ Click to access the [ISU Clinic Map v2](https://isu-ubc.github.io/clinic-mapping
 
 **Note**: If you're on mobile, rotate your device for best experience. 
 
-Shouldn't do a choropleth map with points and shouldn't do a proportional map with polygons. Add a link to the types of mapping.
-
 ## TODO
 
 - Bundler
