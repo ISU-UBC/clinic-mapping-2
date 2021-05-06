@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The Basics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="description" content="A GIS web app to view spatially view clinics">
+		<meta name="author" content="ISU, Omar Kawach">
+    <link rel="icon" href="./assets/websiteIcon.png">
+
+
+    <title>ISU Clinic Map</title>
+    
+    <!-- Custom CSS for the app-->
+    <link rel="stylesheet" href="./css/app.css" />
+    
+    <!-- OpenLayers -->
+    <link rel="stylesheet" href="./css/ol.css" />
+    <script
+      type="text/javascript"
+      src="https://openlayers.org/en/latest/build/ol.js"
+    ></script>
+    
+    <!-- OpenLayers Extensions -->
+    <link rel="stylesheet" href="./css/ol-ext.css"/>
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/Viglino/ol-ext/master/dist/ol-ext.min.js"
+    ></script>
+
+    <!-- OpenLayers LayerSwitcher -->
+    <script src="https://unpkg.com/ol-layerswitcher@3.8.3"></script>
+    <link rel="stylesheet" href="./css/ol-layerswitcher.css" />
+
+    <!-- D3 -->
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <!-- D3 -->
+
+    <!-- Polyfill -->
+    <script src="./pollyfill/pollyfill.min.js"></script>
+  </head>
+
+  <body>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

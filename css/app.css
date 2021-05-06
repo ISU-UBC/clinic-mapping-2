@@ -1,0 +1,116 @@
+html,
+body,
+main,
+.map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+html,
+body,
+select,
+.popup {
+  font-family: "Varela Round", sans-serif;
+  font-size: 11pt;
+}
+
+.ol-control {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.ol-control:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.ol-control.ol-layerswitcher:not(.ol-collapsed),
+.ol-control.ol-layerswitcher:not(.ol-collapsed):hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.ol-control.ol-layerswitcher .panel {
+  background-color: transparent;
+}
+
+.ol-viewport,
+.ol-control button {
+  cursor: pointer;
+}
+
+.ol-popup .ol-popup-content ul {
+  padding: 0;
+  margin: 4px;
+}
+
+.layer-switcher button {
+  background-color: rgba(0, 60, 136, 0.5);
+}
+
+.ol-layerswitcher > button {
+  background-color: rgba(0, 60, 136, 0.5);
+  font-size: 1.14em;
+}
+
+.ol-layerswitcher .panel label,
+.ol-layerswitcher .panel input {
+  cursor: pointer;
+}
+
+.ol-layerswitcher .panel .ol-layer-group {
+  padding-top: 8px;
+}
+
+.ol-layerswitcher .panel .layerup,
+.ol-layerswitcher .panel .ol-layer-group .layerswitcher-opacity,
+.ol-layerswitcher .panel .ol-layer-tile .layerswitcher-opacity {
+  display: none;
+}
+
+.ol-control.ol-full-screen {
+  left: 0.5em;
+  top: 0.5em;
+  right: unset;
+  bottom: unset;
+}
+
+.ol-control.ol-zoom {
+  left: 0.5em;
+  top: 3em;
+  right: unset;
+  bottom: unset;
+}
+
+.ol-control {
+  background-color: none;
+}
+
+.wait {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+
+.wait img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* So the bullet points don't show up in the popup */
+ul {
+  list-style-type: none;
+ }
+ 

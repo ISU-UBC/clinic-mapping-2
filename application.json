@@ -1,0 +1,47 @@
+{   "view": [-127.64, 53.72],
+    "layers": {
+        "CHSAs 2018": {
+            "id": "CHSA2018",
+            "shapeType": "polygon",
+            "url": "./data/CHSA_2018.geojson",
+            "title": "CHSAs 2018",
+            "style": {
+                "styleType": "custom",
+                "color": "rgba(220,220,100, 1)",
+                "opacity": 0.6,
+                "strokeColor": "",
+                "scale": "",
+                "icon": "./assets/icon.png",
+                "theme": {
+                    "size": {
+                        "proportional": ""
+                    },
+                    "color": {
+                        "choropleth": "PHYS_CAPITA",
+                        "identified": "",
+                        "scheme": ["#feedde","#fdbe85","#fd8d3c","#d94701"]
+                    }
+                }
+            },
+            "visible": true,
+            "popup": {
+                "unformatted": [
+                    "CHSA_Name", 
+                    "HSDA_Name", 
+                    "HA_Name",
+                    "CHSA_Pop16",
+                    "PHYS_CAPITA",
+                    "NUM_PHYS"
+                ],
+                "formatted": [
+                    "CHSA Name", 
+                    "HSDA Name", 
+                    "HA Name",
+                    "CHSA Population 2016",
+                    "Physicians per Capita",
+                    "Number of Physicians"
+                ]
+            }
+        }
+    }
+}
