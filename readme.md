@@ -1,66 +1,30 @@
-# Clinic Map v2 (DRAFT)
+# CAMP Clinic List Map Choropleth
 
-Click to access the [ISU Clinic Map v2](https://isu-ubc.github.io/clinic-mapping-2/)
+Click to access the [CAMP Clinic List Map Choropleth](https://isu-ubc.github.io/clinic-mapping-2/)
 
 **Note**: If you're on mobile, rotate your device for best experience. 
 
-## TODO
-
-- Bundler
-- JSDOCs
-- Get an ISU image for loading screen
-
 ## Description
 
-...
+This application hosts two layers to toggle through. One layer maps the number of family physicians per 100,000 based on the clinic list, and the other maps the number of family physicians per 100,000 based on the family physician list from CPSBC. The theme for both layers is [choropleth](https://sites.google.com/site/boardinclassrom/map/choropleth-map). 
 
-## Getting Started
-
-### Features
+## Features of the Application
 
 - Map Container 
   - A view over some geography
-  - View vector data (points)
-    - Two point marker layers (both with custom icons)
-      - One styled based on size (proportional)
-      - Both styled based on identifiers
-  - Two base maps 
+  - View feature layers (points, and / or polygons)
+  - Base maps 
   - OpenLayer Controls
     - Layer switcher to hide / show layers and base maps
     - Zoom in / out
     - Map scale
     - Full screen mode
-    - Popup to show information of the clicked point marker
-    - Legend 
-      - Can handle proportional symbol mapping of point markers
-      - Can handle color coding of point markers (e.g., choropleth)
+    - Popup to show information of the clicked feature in a layer
+    - Legend
 
-### Users
+## Getting Started
 
-Shouldn't do a choropleth map with points and shouldn't do a proportional map with polygons. Add a link to the types of mapping.
-
-A walk-through of the web app
-
-The program is built so that users never have to touch code. Just open the JSON and enter what you want.
-
-Cant be colored and choropleth. It's one or the other.
-
-"id" is how we'll get the layer from using this.map.layers
-"shapetype" well help with styling
-"url" leads to the geojson file
-"title" is how itll appear in the layer switcher, , should be the same as the object key
-"theme" is the style preference when the "styletype" is custom
-"style" is for coloring the features of a layer
-"visible" to set the layer visibility 
-"popup" is for formatting the popup
-
-#### Polygon Layer Style
-
-#### Point Layer Style
-
-### Developers
-
-#### Project Development
+### Project Development
 
 1. Clone the repo to your desired file directory
 2. Download [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) or [Live Server in VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
@@ -69,7 +33,22 @@ Cant be colored and choropleth. It's one or the other.
    - Ensure that cache is disabled in DevTools
 5. Ensure the languages you work with are included in the system PATH
 
-#### File Conversions
+### Feeding the Application Information
+
+#### The JSON
+
+#### Polygon Layer Styling
+##### Default
+
+##### Custom
+
+#### Point Layer Styling
+
+##### Default
+
+##### Custom
+
+### File Conversions
 
 ##### Setup
 
@@ -85,6 +64,10 @@ Cant be colored and choropleth. It's one or the other.
 ##### Use Python Script to Convert SHP to GeoJSON
 
 ##### Use Python Script to Convert from Excel to GeoJSON
+
+##### Use Python Script to Identify Clinics by ID
+
+##### Use Python Script to Solve for Physicians by Population
 
 
 
@@ -108,14 +91,16 @@ Cant be colored and choropleth. It's one or the other.
 
 ## Resources
 
-#### D3
+#### Styling
 
 [D3 Color Schemes](https://observablehq.com/@d3/color-schemes)
 
+[ColorBrewer Cartography Color Advice](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+
 #### GIS
 
-[Spatial references](https://spatialreference.org/ref/epsg/)
+[Spatial References](https://spatialreference.org/ref/epsg/)
 
 #### OpenLayers
 
-**Note:** Coordinate format is Longitude / Latitude. 
+[OpenLayers Documentation](https://openlayers.org/en/latest/doc/)

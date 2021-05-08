@@ -77,14 +77,14 @@ select,
 
 .ol-control.ol-full-screen {
   left: 0.5em;
-  top: 0.5em;
+  top: 4.5em;
   right: unset;
   bottom: unset;
 }
 
 .ol-control.ol-zoom {
   left: 0.5em;
-  top: 3em;
+  top: 0.5em;
   right: unset;
   bottom: unset;
 }
