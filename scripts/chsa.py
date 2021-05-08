@@ -11,13 +11,13 @@ import geopandas as gpd
 from geopandas import GeoDataFrame as gdf
 
 # The file and the path to it
-file = "../data/CHSA_2018.geojson"
+file = "../data/CHSA_family.geojson"
 
 # Load the geojson as a geopandas data frame
 gdf = gpd.read_file(file)
 
 # Load the excel sheet as a pandas data frame
-excel_data_df = pd.read_excel('../data/clinic_list.xlsx')
+excel_data_df = pd.read_excel('../data/V2_Layer2_Data.xlsx')
 
 # Formula = # physicians / CHSA population * 100,000
 

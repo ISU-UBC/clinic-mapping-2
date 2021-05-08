@@ -1,17 +1,17 @@
 {   "view": [-127.64, 53.72],
     "layers": {
-        "CHSAs 2018": {
-            "id": "CHSA2018",
+        "Included Clinics Only": {
+            "id": "clinics",
             "shapeType": "polygon",
-            "url": "./data/CHSA_2018.geojson",
-            "title": "CHSAs 2018",
+            "url": "./data/CHSA_clinic.geojson",
+            "title": "Included Clinics Only",
             "style": {
                 "styleType": "custom",
                 "color": "rgba(220,220,100, 1)",
                 "opacity": 0.6,
                 "strokeColor": "",
                 "scale": "",
-                "icon": "./assets/icon.png",
+                "icon": "",
                 "theme": {
                     "size": {
                         "proportional": "",
@@ -21,8 +21,8 @@
                         "choropleth": "PHYS_CAPITA",
                         "ranking": "decile",
                         "identified": "",
-                        "scheme": ["#fff5eb","#fee7cf","#fdd4ab","#fdb97e","#fd9c51","#f77d2a","#e85e0e","#cc4503","#a33503","#7f2704"],
-                        "legend": "Decile"
+                        "scheme": ["#f7fbff","#e1edf8","#cadef0","#abcfe6","#82badb","#59a1cf","#3787c0","#1c6aaf","#0b4d94","#08306b"],
+                        "legend": "Number of Family Physicians per 100,000 Population"
                     }
                 }
             },
@@ -46,18 +46,18 @@
                 ]
             }
         },
-        "CHSAs 2018 2": {
-            "id": "CHSA20182",
+        "All Family Physicians From CPSBC": {
+            "id": "family",
             "shapeType": "polygon",
-            "url": "./data/CHSA_2018.geojson",
-            "title": "CHSAs 2018 2",
+            "url": "./data/CHSA_family.geojson",
+            "title": "All Family Physicians From CPSBC",
             "style": {
                 "styleType": "custom",
                 "color": "rgba(220,220,100, 1)",
                 "opacity": 0.6,
                 "strokeColor": "",
                 "scale": "",
-                "icon": "./assets/icon.png",
+                "icon": "",
                 "theme": {
                     "size": {
                         "proportional": "",
@@ -65,9 +65,9 @@
                     },
                     "color": {
                         "choropleth": "PHYS_CAPITA",
-                        "ranking": "quintile",
+                        "ranking": "decile",
                         "identified": "",
-                        "scheme": ["#feedde","#fdbe85","#fd8d3c","#e6550d","#a63603"],
+                        "scheme": ["#fff5eb","#fee7cf","#fdd4ab","#fdb97e","#fd9c51","#f77d2a","#e85e0e","#cc4503","#a33503","#7f2704"],
                         "legend": "Number of Family Physicians per 100,000 Population"
                     }
                 }
