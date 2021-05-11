@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: omarkawach
+@description: Convert a shapefile to GeoJSON
 """
 
 # Import packages

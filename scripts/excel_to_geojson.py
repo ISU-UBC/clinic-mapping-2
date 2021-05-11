@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: omarkawach
+@description: Convert an Excel sheet to GeoJSON
 """
 
 # Import packages
@@ -10,7 +11,7 @@ import geopandas as gpd
 from geopandas import GeoDataFrame as gdf
 
 # Load the excel sheet as a pandas data frame
-excel_data_df = pd.read_excel('../data/V2_Layer2_Data.xlsx')
+excel_data_df = pd.read_excel('../data/clinic_list.xlsx')
 
 # Convert the pandas data frame into a geopandas data frame 
 gdf = gpd.GeoDataFrame(
@@ -20,7 +21,7 @@ gdf = gpd.GeoDataFrame(
 gdf = gdf.set_crs('epsg:4326')
 
 # Set a file name
-filename = "V2_Layer2_Data"
+filename = "clinic_list"
 
 # Insert the filename into the path to the data folder
 url = '../data/{}.geojson'.format(filename)

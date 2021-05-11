@@ -3,6 +3,7 @@
 """
 @author: omarkawach
 @note: This script assumes you already converted your shape file to geojson
+@description: Fix the ID column in the clinic list GeoJSON for easier identification
 """
 
 # Import packages
@@ -11,7 +12,7 @@ import geopandas as gpd
 from geopandas import GeoDataFrame as gdf
 
 # The file and the path to it
-file = "../data/V2_Layer2_Data.geojson"
+file = "../data/clinic_list.geojson"
 
 # Load the geojson as a geopandas data frame
 gdf = gpd.read_file(file)

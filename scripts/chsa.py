@@ -3,6 +3,8 @@
 """
 @author: omarkawach
 @note: This script assumes you already converted your shape file to geojson
+@description: For adding new data to a GeoJSON, particularly the #
+of physicians per capita
 """
 
 # Import packages
